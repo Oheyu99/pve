@@ -18,6 +18,7 @@ echo -e "${green}4. (centos、ubuntu、debian、alpine)一键开启SSH${plain}"
 echo -e "${green}5. 黑群晖cpu正确识别${plain}"
 echo -e "${green}6. 黑群晖自动挂载洗白(挂载目录/tmp/boot)${plain}"
 echo -e "${green}7. 一键设置交换虚拟分区${plain}"
+echo -e "${green}8. pvetools脚本${plain}"
 read -p "请输入要执行的操作编号：" operation
 
 case $operation in
@@ -41,6 +42,9 @@ case $operation in
         ;;
     7)
         bash -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/swap.sh)"
+        ;;
+    8)
+        bash -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/Oheyu99/pve/main/pvetools.sh)"
         ;;
     *)
         echo -e "${red}输入的操作编号无效，请重新运行脚本并输入正确的编号。${plain}"
